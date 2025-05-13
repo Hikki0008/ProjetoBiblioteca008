@@ -2,8 +2,8 @@ package org.biblioteca.biblioteca009.Services;
 
 
 
-import org.biblioteca.biblioteca008.Modelos.Cliente;
-import org.biblioteca.biblioteca008.Repositorios.ClienteRepository;
+import org.biblioteca.biblioteca009.Modelos.Cliente;
+import org.biblioteca.biblioteca009.Repositorios.ClienteRepository;
 
 import java.util.List;
 

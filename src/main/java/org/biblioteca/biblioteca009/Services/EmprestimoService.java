@@ -2,9 +2,9 @@ package org.biblioteca.biblioteca009.Services;
 
 
 
-import org.biblioteca.biblioteca008.Modelos.Emprestimos;
-import org.biblioteca.biblioteca008.Modelos.Livros;
-import org.biblioteca.biblioteca008.Repositorios.EmprestimoRepository;
+import org.biblioteca.biblioteca009.Modelos.Emprestimos;
+import org.biblioteca.biblioteca009.Modelos.Livros;
+import org.biblioteca.biblioteca009.Repositorios.EmprestimoRepository;
 
 import java.time.LocalDate;
 import java.util.List;

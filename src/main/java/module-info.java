@@ -9,5 +9,7 @@ module org.biblioteca.biblioteca009 {
     requires java.sql;
 
     opens org.biblioteca.biblioteca009 to javafx.fxml;
+    opens org.biblioteca.biblioteca009.Controllers to javafx.fxml;
+
     exports org.biblioteca.biblioteca009;
 }
