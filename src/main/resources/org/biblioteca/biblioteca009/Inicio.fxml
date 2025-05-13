@@ -1,0 +1,20 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.biblioteca.biblioteca009.Controllers.InicioController">
+    <left>
+        <VBox spacing="10" style="-fx-background-color: #2c3e50; -fx-padding: 10;">
+            <Button text="Livros" />
+            <Button text="Usuários" />
+            <Button text="Empréstimos" />
+            <Button text="Pagamento" />
+            <Button text="Cliente" />
+        </VBox>
+    </left>
+    <center>
+        <Label text="Bem-vindo ao Sistema de Biblioteca" styleClass="label-title"/>
+    </center>
+</BorderPane>
