@@ -9,13 +9,13 @@ import java.sql.*;
 public class UsuarioRepository {
 
     private String url = "jdbc:mysql://localhost:3306/biblioteca008"; // Ajuste o nome do banco
-    private String user = "root"; // Ajuste conforme seu ambiente
-    private String password = null; // Coloque a senha do seu MySQL
+    private String usuario = "root";
+    private String password = "hikki";
 
     public Usuario buscarPorcpf(String cpf) {
         String SQL = "SELECT * FROM Usuario WHERE cpf = ?";
 
-        try (Connection conn = DriverManager.getConnection(url, user, password);
+        try (Connection conn = DriverManager.getConnection(url, usuario, password);
              PreparedStatement stmt = conn.prepareStatement(SQL)) {
 
             stmt.setString(1, cpf);

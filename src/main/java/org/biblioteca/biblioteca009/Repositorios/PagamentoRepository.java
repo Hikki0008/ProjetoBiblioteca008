@@ -11,7 +11,7 @@ import java.util.List;
 public class PagamentoRepository {
     private final String url = "jdbc:mysql://localhost:3306/biblioteca008";
     private final String usuario = "root";
-    private final String senha = "sua_senha";
+    private final String senha = "hikki";
 
     private Connection conectar() throws SQLException {
         return DriverManager.getConnection(url, usuario, senha);

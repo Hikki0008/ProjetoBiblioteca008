@@ -10,7 +10,7 @@ public class Conexao {
 
     private static final String URL = "jdbc:mysql://localhost:3306/biblioteca008";
     private static final String USUARIO = "root";
-    private static final String SENHA = null;
+    private static final String SENHA = "hikki";
 
     public static Connection conectar() throws SQLException {
         try {

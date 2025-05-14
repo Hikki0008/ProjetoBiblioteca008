@@ -7,62 +7,79 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
+public class InicioController {
 
-    public class InicioController {
+    @FXML
+    private Button buttonLivros;
+    @FXML
+    private Button buttonUsuarios;
+    @FXML
+    private Button buttonEmprestimos;
+    @FXML
+    private Button buttonPagamento;
+    @FXML
+    private Button buttonCliente;
 
-        @FXML
-        private Button buttonLivros;
-        @FXML
-        private Button buttonUsuarios;
-        @FXML
-        private Button buttonEmprestimos;
-        @FXML
-        private Button buttonPagamento;
-        @FXML
-        private Button buttonCliente;
+    @FXML
+    public void initialize() {
+        // Adicionando ações aos botões
+        buttonLivros.setOnAction(event -> abrirTela());
+        buttonUsuarios.setOnAction(event -> abrirTela());
+        buttonEmprestimos.setOnAction(event -> abrirTelaEmprestimos());
+        buttonPagamento.setOnAction(event -> abrirTelaPagamento());
+        buttonCliente.setOnAction(event -> abrirTelaCliente());
+    }
 
-        @FXML
-        public void initialize() {
-            // Adicionando ações aos botões
-            buttonLivros.setOnAction(event -> abrirTelaLivros());
-            buttonUsuarios.setOnAction(event -> abrirTelaUsuarios());
-            buttonEmprestimos.setOnAction(event -> abrirTelaEmprestimos());
-            buttonPagamento.setOnAction(event -> abrirTelaPagamento());
-            buttonCliente.setOnAction(event -> abrirTelaCliente());
-        }
+    private void abrirTela() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/biblioteca/biblioteca009/Livros.fxml"));
+            Parent root = loader.load();
 
-        private void abrirTelaLivros() {
-            carregarTela("Livros");
-        }
-
-        private void abrirTelaUsuarios() {
-            carregarTela("Usuarios");
-        }
-
-        private void abrirTelaEmprestimos() {
-            carregarTela("Emprestimos");
-        }
-
-        private void abrirTelaPagamento() {
-            carregarTela("Pagamento");
-        }
-
-        private void abrirTelaCliente() {
-            carregarTela("Cliente");
-        }
-
-        private void carregarTela(String nomeTela) {
-            try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/src/views/" + nomeTela + ".fxml"));
-                Parent root = loader.load();
-
-                // Cria uma nova cena e exibe
-                Stage stage = (Stage) buttonLivros.getScene().getWindow();
-                stage.setScene(new Scene(root));
-                stage.show();
-            } catch (Exception e) {
-                e.printStackTrace();
-                // Exibir mensagem de erro ou alerta caso haja problema no carregamento da tela
-            }
+            Stage stage = (Stage) buttonLivros.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Erro ao carregar a tela: ");
         }
     }
+    private void abrirTelaEmprestimos() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/biblioteca/biblioteca009/Emprestimos.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = (Stage) buttonEmprestimos.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Erro ao carregar a tela: ");
+        }
+    }
+    private void abrirTelaPagamento() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/biblioteca/biblioteca009/Pagamento.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = (Stage) buttonPagamento.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Erro ao carregar a tela: ");
+        }
+    }
+    private void abrirTelaCliente() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/biblioteca/biblioteca009/cliente.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = (Stage) buttonCliente.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Erro ao carregar a tela: ");
+        }
+    }
+}

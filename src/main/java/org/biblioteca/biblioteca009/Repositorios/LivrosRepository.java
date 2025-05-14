@@ -12,7 +12,7 @@ public class LivrosRepository {
 
     private final String url = "jdbc:mysql://localhost:3306/biblioteca008"; // ajuste conforme seu banco
     private final String usuario = "root";
-    private final String senha = null;
+    private final String senha = "hikki";
 
     private Connection conectar() throws SQLException {
         return DriverManager.getConnection(url, usuario, senha);

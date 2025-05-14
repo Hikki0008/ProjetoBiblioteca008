@@ -149,7 +149,7 @@ public class LivrosController {
     @FXML
     private void onVoltarInicio() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Biblioteca008/Resources/views/inicio.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("org/biblioteca/biblioteca009/inicio.fxml"));
             Parent root = loader.load();
             Stage stage = new Stage();
             stage.setTitle("Tela de Início");
